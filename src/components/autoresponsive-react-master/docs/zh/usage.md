@@ -1,0 +1,58 @@
+## Usage
+
+### Simplest
+
+简单的例子：
+
+``` javascript
+class SimplestSampleComponent extends React.Component {
+
+  ...
+
+  render() {
+    return (
+      <div>
+        <div className="btn-group">
+          {this.renderButtons()}
+        </div>
+        <AutoResponsive ref="container" {...this.getAutoResponsiveProps()}>
+          {this.renderItems()}
+        </AutoResponsive>
+      </div>
+    );
+  }
+}
+```
+
+### waterfall
+
+实现一个流式布局变得非常容易
+
+``` javascript
+class WaterfallSampleComponent extends React.Component {
+
+  ...
+
+  render() {
+    return (
+      <AutoResponsive ref="container" {...this.getAutoResponsiveProps()}>
+        {
+          arrayList.map(function(i) {
+            return <div onClick={this.clickItemHandle} className="item" style={this.state.styleList[i]}>{i}</div>;
+          }, this)
+        }
+      </AutoResponsive>
+    );
+  }
+}
+
+```
+
+## Examples
+
+- [常见用法示例](./examples)
+
+## Related Edition
+
+- [ReactNative 版本](//github.com/xudafeng/autoresponsive-react-native)
+- [Vue 版本](//github.com/xudafeng/autoresponsive-vue)

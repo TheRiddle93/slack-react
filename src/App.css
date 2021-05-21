@@ -1,0 +1,5 @@
+/* '*' is to link the css to the root/global of the file being styled */
+
+* {
+  margin: 0;
+}

@@ -1,0 +1,11 @@
+.travis.yml
+test/
+assets/
+homepage/
+examples/
+docs/
+coverage/
+reports/
+screenshots/
+*.sw*
+*.un~
